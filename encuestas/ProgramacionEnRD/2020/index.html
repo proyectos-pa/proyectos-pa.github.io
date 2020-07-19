@@ -12,113 +12,153 @@
 				-ms-user-select: none;
 			}
 		</style>
-		
+
 	</head>
 	<body>
 		<div id="container">
 			<img src="https://gcaff.github.io/PA/logo/PA_logo_white_transparent_wp1.png" style="width: 30vw; min-width: 100px; float: right;">
 			<h1> Encuesta Programación en RD 2020 </h1>
-			
+
 			<h3>Descripción</h3>
-			<h5> 
+			<h5>
 				Durante los días 8-12 de julio del 2020 se entrevistaron más de 500 programadores y desarrolladores de aplicaciones en la República Dominicana sobre sus condiciones laborales, las herramientas que utilizan, y las dificultades o desafíos que enfrenta la programación en nuestro país.
-			
+
 				Este artículo presenta los resultados de esta encuesta. </h5>
 			<h3>
 				1.¿Qué tipo de desarrollador se considera usted actualmente?
 			</h3>
-			<div id="container1" style="width: 100%;">
+			<div id="container1" style="width: 100%;height:600px;">
 				<canvas id="pq1"></canvas>
 			</div>
 
 			<h3>
 				2.¿Cuáles lenguajes de programación ha utilizado en los últimos 12 meses? Seleccione todos los que apliquen.
 
-			<div id="container2" style="width: 100%;">
+			<div id="container2" style="width: 100%;height:600px">
 				<canvas id="pq2"></canvas>
 			</div>
-			</div>
-			
+
+
 		<h3>
 			22.¿Cuál es el tamaño de su equipo?
 		</h3>
 		<div id="container22" style="width: 100%;">
 			<canvas id="pq22"></canvas>
 		</div>
-		
+
         	<h3>
 			23. ¿Cuáles considera usted que son las principales limitantes, retos o desafíos para el desarrollo de la programación en la República Dominicana? Seleccione todas las que apliquen.</h3>
-        
+
         	<div id="container23" style="width: 100%;">
 			<canvas id="pq23"></canvas>
 		</div>
 		</div>
-		
-		
+		</div>
+
 		<script>
-			
+
 			Chart.plugins.unregister(ChartDataLabels);
-			
+
 			var ctx1 = document.getElementById('pq1').getContext('2d');
 			var chart = new Chart(ctx1, {
- 			    type: 'outlabeledPie',
+ 			    type: 'horizontalBar',
  			    data: {
- 				labels: ['Desarrollador de back-end ', 'Desarrollador de front-end ', 'Desarrollador completo (front-end + back-end) ', 'Desarrollador de aplicaciones móviles ', 'Administrador de base de datos ', 'Diseñador ', 'Administrador de sistemas ', 'Analista/ingeniero de datos o BI ', 'Científico de datos o especialista de aprendizaje automático', 'Investigador académico ', 'Educador ', 'Desarrollador de video juegos ', 'Ejecutivo senior o VP ', 'Marketing o profesional de ventas ', 'Otro'],
+ 				labels: [['Desarrollador completo','(front-end + back-end)'], 'Desarrollador de back-end ', 'Desarrollador de front-end ', [['Analista/ingeniero'],['de datos o BI']], 'Otro', [['Desarrollador de'],['aplicaciones móviles']], [['Científico de datos o especialista'],['de aprendizaje automático']], 'Administrador de base de datos ', 'Administrador de sistemas ', 'Investigador académico ', 'Ejecutivo senior o VP ', 'Diseñador ', 'Desarrollador de video juegos ', 'Marketing o profesional de ventas ', 'Educador '],
  				datasets: [{
- 				    backgroundColor: ['#684B7D', '#3591B3', '#83C01E', '#F09314', '#EA4B72', '#B07AD2', '#2F55C1', '#2AC892', '#FACD39', '#D04241', '#4F4A8B', '#333747', '#199935', '#D66121', '#921F3D'],
- 				    borderColor: '#202529',
-				    data: [0.179, 0.106, 0.321, 0.045, 0.042, 0.017, 0.033, 0.076, 0.045, 0.028, 0.007, 0.01, 0.021, 0.009, 0.061]
+						backgroundColor: '#1dc4f7',
+						borderColor: '#202529',
+				    data: [32.1, 17.9, 10.6, 7.6, 6.1, 4.5, 4.5, 4.2, 3.3, 2.8, 2.1, 1.7, 1, 0.9, 0.7]
  				}]
  			    },
- 			    options: {legend: {display: false}}
+					plugins: [
+						ChartDataLabels
+					],
+ 			    options: {
+						maintainAspectRatio: false,
+						legend: {display: false},
+				    scales: {
+					  	yAxes: [{
+								ticks: {
+						    	fontColor: "white"
+								}
+					  	}],
+					    xAxes: [{
+								ticks: {
+						    	fontColor: "white",
+						    	min: 0,
+						    	max: 40,
+						    	callback: function(value) {
+						      	return value + "%"
+						   		}
+								},
+					    	scaleLabel: {
+						    	display: true
+					     	}
+					 		}]
+				  	},
+				    	plugins: {
+					    // Change options for ALL labels of THIS CHART
+					    	datalabels: {
+									color: 'white',
+									anchor: 'end',
+									align: 'right',
+									formatter: function(value, context) {
+		    						return value + '%';
+									}
+					    	}
+							}
+			    	}
  			});
-			
+
 			var ctx2 = document.getElementById('pq2').getContext('2d');
-			ctx2.height = 750;
 			var chart = new Chart(ctx2, {
  			    type: 'horizontalBar',
  			    data: {
- 				labels: ['SQL ', 'Javascript ', 'HTML/CSS ', 'C# ', 'Python ', 'Java ', 'PHP ', 'TypeScript ', 'R ', 'C++ ', 'VBA ', 'Bash ', 'Otro (especifique) ', 'C ', 'Dart ', 'MATLAB ', 'Kotlin ', 'Stata ', 'Ruby ', 'Eviews ', 'Go ', 'Swift ', 'Rust ', 'Objective-C ', 'Perl ', 'Assembly ', 'Haskell ', 'Scala '],
- 				datasets: [{
- 				    backgroundColor: '#1dc4f7',
- 				    borderColor: '#202529',
-				    data: [0.671, 0.644, 0.638, 0.431, 0.401, 0.27, 0.256, 0.215, 0.125, 0.112, 0.081, 0.08, 0.078, 0.073, 0.073, 0.038, 0.038, 0.035, 0.031, 0.028, 0.026, 0.017, 0.012, 0.01, 0.01, 0.007, 0.007, 0.005]
- 				}]
- 			    },
+ 						labels: ['SQL ', 'Javascript ', 'HTML/CSS ', 'C# ', 'Python ', 'Java ', 'PHP ', 'TypeScript ', 'R ', 'C++ ', 'VBA ', 'Bash ', 'Otro (especifique) ', 'C ', 'Dart ', 'MATLAB ', 'Kotlin ', 'Stata ', 'Ruby ', 'Eviews ', 'Go ', 'Swift ', 'Rust ', 'Objective-C ', 'Perl ', 'Assembly ', 'Haskell ', 'Scala '],
+ 						datasets: [{
+ 				    	backgroundColor: '#1dc4f7',
+ 				    	borderColor: '#202529',
+				    	data: [67.1, 64.4, 63.8, 43.1, 40.1, 27, 25.6, 21.5, 12.5, 11.2, 8.1, 8, 7.3, 7.3, 3.8, 3.8, 3.5, 3.1, 2.8, 2.6, 1.7, 1.2, 1, 1, 0.7, 0.7, 0.5, 0.3]
+ 						}]
+ 			 		},
 			    plugins: [ChartDataLabels],
- 			    options: {legend: {display: false},
-				      scales: { 
-					    yAxes: [{
-						ticks: {
-						    fontColor: "white"
-						}
-					    }],
+ 			    options: {
+						maintainAspectRatio: false,
+						legend: {display: false},
+				    scales: {
+					  	yAxes: [{
+								ticks: {
+						    	fontColor: "white"
+								}
+					  	}],
 					    xAxes: [{
-						ticks: {
-						    fontColor: "white",
-						    min: 0,
-						    max: 100,
-						    callback: function(value) {
-						        return value + "%"
-						    }
-						},
-					        scaleLabel: {
-						    display: true,
-						    labelString: "Percentage"
-					        }
-					    }]
-				      },
-				       plugins: {
+								ticks: {
+						    	fontColor: "white",
+						    	min: 0,
+						    	max: 80,
+						    	callback: function(value) {
+						      	return value + "%"
+						   		}
+								},
+					    	scaleLabel: {
+						    	display: true
+					     	}
+					 		}]
+				  	},
+				    	plugins: {
 					    // Change options for ALL labels of THIS CHART
-					    datalabels: {
-						color: 'white',
-						anchor: 'end',
-						align: 'right'
-					    }
-					}
-			    }
+					    	datalabels: {
+									color: 'white',
+									anchor: 'end',
+									align: 'right',
+									formatter: function(value, context) {
+		    						return value + '%';
+									}
+					    	}
+							}
+			    	}
  			});
-			
+
 			var ctx22 = document.getElementById('pq22').getContext('2d');
 			var chart = new Chart(ctx22, {
  			    type: 'outlabeledPie',
@@ -132,7 +172,7 @@
  			    },
  			    options: {legend: {display: false}}
  			});
-			
+
 			var ctx23 = document.getElementById('pq23').getContext('2d');
 			var chart = new Chart(ctx23, {
 			    // The type of chart we want to create

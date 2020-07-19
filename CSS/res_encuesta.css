@@ -5,11 +5,10 @@ h1,h2,h3,h4,h5,h6,p {
   color: white;
 }
 h3 {
-  color:white;  
+  color:white;
 }
-.container {
+div#container {
   max-width:575px;
 	margin:0 auto;
 	margin-bottom: 20px;
  }
-
