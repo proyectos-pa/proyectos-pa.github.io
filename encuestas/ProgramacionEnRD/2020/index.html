@@ -21,6 +21,10 @@
 			<canvas id="plot2"></canvas>
 		</div>
 		
+		<h3>
+		22.¿Cuál es el tamaño de su equipo?
+		</h3>
+		
         <h3>23. ¿Cuáles considera usted que son las principales limitantes, retos o desafíos para el desarrollo de la programación en la República Dominicana? Seleccione todas las que apliquen.</h3>
         
         <div id="container3" style="width: 100%;">
@@ -30,7 +34,7 @@
 		<script>
 			var ctx1 = document.getElementById('plot1').getContext('2d');
 			var ctx2 = document.getElementById('plot2').getContext('2d');
-			var ctx3 = document.getElementById('plot3').getContext('2d');
+			var ctx23 = document.getElementById('pq23').getContext('2d');
 			var chart = new Chart(ctx1, {
 			    // The type of chart we want to create
 			    type: 'horizontalBar',
@@ -65,7 +69,18 @@
 			    // Configuration options go here
 			    options: {}
 			});
-			var chart = new Chart(ctx3, {
+			var chart = new Chart(ctx22, {
+			    type: 'pie',
+			    data: {
+				labels: ['Trabajo independiente/solo ', 'De 2-3 integrantes (incluyéndome) ', 'De 4-6 integrantes (incluyéndome) ', 'De 7-9 integrantes (incluyéndome) ', 'De 10-15 integrantes (incluyéndome) ', 'De 16-30 integrantes (incluyéndome) ', 'Más de 30 integrantes (incluyéndome) '],
+				datasets: [{
+				    backgroundColor: ['Red','Green','Blue'],
+				    data: [0.122, 0.223, 0.221, 0.127, 0.129, 0.108, 0.07]
+				}]
+			    },
+			    options: {}
+			});
+			var chart = new Chart(ctx23, {
 			    // The type of chart we want to create
 			    type: 'bar',
 
