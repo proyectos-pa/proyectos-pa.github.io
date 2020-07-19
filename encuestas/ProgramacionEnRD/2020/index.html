@@ -95,8 +95,17 @@
 					    }],
 					    xAxes: [{
 						ticks: {
-						    fontColor: "white"
-						}
+						    fontColor: "white",
+						    min: 0,
+						    max: 100,
+						    callback: function(value) {
+						        return value + "%"
+						    }
+						},
+					        scaleLabel: {
+						    display: true,
+						    labelString: "Percentage"
+					        }
 					    }]
 				      },
 				       plugins: {
