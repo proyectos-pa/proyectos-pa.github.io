@@ -1,12 +1,12 @@
-var ctx23 = document.getElementById('pq23').getContext('2d');
-var chart = new Chart(ctx23, {
+var ctx9 = document.getElementById('pq9').getContext('2d');
+var chart = new Chart(ctx9, {
     type: 'horizontalBar',
     data: {
-  labels: ['Bajo nivel educativo escolar', [['Bajo dominio del inglés'], ['u otros idiomas extranjeros']], [['Bajo nivel'],['educativo universitario']], [['Falta de oferta'],['académica relevante']], 'Bajos ingresos', 'Falta de empleos relevantes', 'Rigideces laborales', 'Estigmas sociales'],
-  datasets: [{
-      backgroundColor: '#1dc4f7',
-      borderColor: '#202529',
-      data: [50.9, 50.7, 48.7, 48.6, 46.6, 42.8, 29.3, 20.8]
+      labels: [[['Ingeniería de Sistemas'],['o Software']], 'Economía ', 'Otra carrera ', [['Ingeniería Electrónica'],['y de Comunicaciones']], 'Administración de Empresas ', 'Ingeniería Industrial ', 'Ingeniería Civil ', 'Matemáticas ', 'Ciencia de Datos ', 'Finanzas ', [['Ingeniería Mecánica'],['o Mecatrónica']], 'Estadística ', 'Ingeniería Eléctrica ', 'Biología/Medicina ', 'Publicidad/Mercadeo '],
+      datasets: [{
+        backgroundColor: '#1dc4f7',
+        borderColor: '#202529',
+        data: [66, 10, 9.1, 4.2, 1.6, 1.6, 1.3, 1.3, 1.1, 1.1, 1.1, 0.4, 0.4, 0.2, 0.2]
   }]
     },
     plugins: [
@@ -25,7 +25,7 @@ var chart = new Chart(ctx23, {
           ticks: {
             fontColor: "white",
             min: 0,
-            max: 60,
+            max: 70,
             callback: function(value) {
               return value + "%"
             }
