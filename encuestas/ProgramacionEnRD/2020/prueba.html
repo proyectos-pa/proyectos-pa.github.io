@@ -12,11 +12,15 @@
 	</head>
 	<body>
 		<div id="container" style="width: 75%;">
-			<canvas id="canvas"></canvas>
+			<canvas id="plot1"></canvas>
+		</div>
+		<div id="container" style="width: 100%;">
+			<canvas id="plot2"></canvas>
 		</div>
 		<script>
-			var ctx = document.getElementById('canvas').getContext('2d');
-			var chart = new Chart(ctx, {
+			var ctx1 = document.getElementById('plot1').getContext('2d');
+			var ctx2 = document.getElementById('plot2').getContext('2d');
+			var chart = new Chart(ctx1, {
 			    // The type of chart we want to create
 			    type: 'horizontalBar',
 
@@ -28,6 +32,24 @@
 				    backgroundColor: 'rgb(255, 99, 132)',
 				    borderColor: 'rgb(255, 99, 132)',
 				    data: [0, 10, 5, 2, 20, 30, 45]
+				}]
+			    },
+
+			    // Configuration options go here
+			    options: {}
+			});
+			var chart = new Chart(ctx2, {
+			    // The type of chart we want to create
+			    type: 'pie',
+
+			    // The data for our dataset
+			    data: {
+				labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+				datasets: [{
+				    label: 'My First dataset',
+				    backgroundColor: 'rgb(255, 99, 132)',
+				    borderColor: 'rgb(255, 99, 132)',
+				    data: [10, 10, 5, 2, 20, 30, 45]
 				}]
 			    },
 
