@@ -21,7 +21,9 @@ div.descripcion {
 p.titulo {
   font-size: 26;
   font-weight: bold;
-
+}
+p.resumen{
+  font-size: 18;
 }
 p.categoria {
   font-size: 20;
