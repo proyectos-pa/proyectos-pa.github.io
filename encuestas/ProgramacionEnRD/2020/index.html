@@ -92,6 +92,15 @@
 						ticks: {
 						    fontColor: "white"
 						}
+					    }],
+					    xAxes: [{
+						ticks: {
+						    min: 0,
+						    max: 100,
+						    callback: function(value) {
+						       return value + "%"
+						   }
+						}
 					    }]
 				      },
 				       plugins: {
