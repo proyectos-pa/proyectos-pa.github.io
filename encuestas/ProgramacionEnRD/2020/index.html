@@ -13,15 +13,8 @@
 		
 	</head>
 	<body>
-		<div id="container" style=>
-		<div id="container1" style="width: 75%;">
-			<canvas id="plot1"></canvas>
-		</div>
-		<h1>AAA</h1>
-
-		<div id="container2" style="width: 100%;">
-			<canvas id="plot2"></canvas>
-		</div>
+		<div id="container">
+			
 		
 		<h3>
 			22.¿Cuál es el tamaño de su equipo?
@@ -38,42 +31,7 @@
 		</div>
 		</div>
 		<script>
-			var ctx1 = document.getElementById('plot1').getContext('2d');
-			var chart = new Chart(ctx1, {
-			    // The type of chart we want to create
-			    type: 'horizontalBar',
-
-			    // The data for our dataset
-			    data: {
-				labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-				datasets: [{
-				    label: 'My First dataset',
-				    backgroundColor: 'rgb(255, 99, 132)',
-				    borderColor: 'rgb(255, 99, 132)',
-				    data: [0, 10, 5, 2, 20, 30, 45]
-				}]
-			    },
-
-			    // Configuration options go here
-			    options: {}
-			});
-			var ctx2 = document.getElementById('plot2').getContext('2d');
-			var chart = new Chart(ctx2, {
-			    // The type of chart we want to create
-			    type: 'pie',
-
-			    // The data for our dataset
-			    data: {
-				labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-				datasets: [{
-				    backgroundColor: ['Red','Green','Blue'],
-				    data: [10, 10, 5, 2, 20, 30, 45]
-				}]
-			    },
-
-			    // Configuration options go here
-			    options: {}
-			});
+			
 			var ctx22 = document.getElementById('pq22').getContext('2d');
 			var chart = new Chart(ctx22, {
  			    type: 'outlabeledPie',
