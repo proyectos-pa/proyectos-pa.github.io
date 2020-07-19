@@ -22,8 +22,9 @@
 			<h3>Descripción</h3>
 			<h5>
 				Durante los días 8-12 de julio del 2020 se entrevistaron más de 500 programadores y desarrolladores de aplicaciones en la República Dominicana sobre sus condiciones laborales, las herramientas que utilizan, y las dificultades o desafíos que enfrenta la programación en nuestro país.
-
-				Este artículo presenta los resultados de esta encuesta. </h5>
+			</br></br>
+				Este artículo presenta los resultados de esta encuesta.
+			</h5>
 			<h3>
 				1.¿Qué tipo de desarrollador se considera usted actualmente?
 			</h3>
@@ -33,165 +34,33 @@
 
 			<h3>
 				2.¿Cuáles lenguajes de programación ha utilizado en los últimos 12 meses? Seleccione todos los que apliquen.
-
+			</h3>
 			<div id="container2" style="width: 100%;height:600px">
 				<canvas id="pq2"></canvas>
 			</div>
 
+			<h3>
+				22.¿Cuál es el tamaño de su equipo?
+			</h3>
+			<div id="container22" style="width: 100%;">
+				<canvas id="pq22"></canvas>
+			</div>
 
-		<h3>
-			22.¿Cuál es el tamaño de su equipo?
-		</h3>
-		<div id="container22" style="width: 100%;">
-			<canvas id="pq22"></canvas>
-		</div>
-
-        	<h3>
-			23. ¿Cuáles considera usted que son las principales limitantes, retos o desafíos para el desarrollo de la programación en la República Dominicana? Seleccione todas las que apliquen.</h3>
-
-        	<div id="container23" style="width: 100%;">
-			<canvas id="pq23"></canvas>
-		</div>
-		</div>
+			<h3>
+			23. ¿Cuáles considera usted que son las principales limitantes, retos o desafíos para el desarrollo de la programación en la República Dominicana? Seleccione todas las que apliquen.
+			</h3>
+			<div id="container23" style="width: 100%;width: 100%;height:600px">
+				<canvas id="pq23"></canvas>
+			</div>
 		</div>
 
 		<script>
-
 			Chart.plugins.unregister(ChartDataLabels);
-
-			var ctx1 = document.getElementById('pq1').getContext('2d');
-			var chart = new Chart(ctx1, {
- 			    type: 'horizontalBar',
- 			    data: {
- 				labels: [['Desarrollador completo','(front-end + back-end)'], 'Desarrollador de back-end ', 'Desarrollador de front-end ', [['Analista/ingeniero'],['de datos o BI']], 'Otro', [['Desarrollador de'],['aplicaciones móviles']], [['Científico de datos o especialista'],['de aprendizaje automático']], 'Administrador de base de datos ', 'Administrador de sistemas ', 'Investigador académico ', 'Ejecutivo senior o VP ', 'Diseñador ', 'Desarrollador de video juegos ', 'Marketing o profesional de ventas ', 'Educador '],
- 				datasets: [{
-						backgroundColor: '#1dc4f7',
-						borderColor: '#202529',
-				    data: [32.1, 17.9, 10.6, 7.6, 6.1, 4.5, 4.5, 4.2, 3.3, 2.8, 2.1, 1.7, 1, 0.9, 0.7]
- 				}]
- 			    },
-					plugins: [
-						ChartDataLabels
-					],
- 			    options: {
-						maintainAspectRatio: false,
-						legend: {display: false},
-				    scales: {
-					  	yAxes: [{
-								ticks: {
-						    	fontColor: "white"
-								}
-					  	}],
-					    xAxes: [{
-								ticks: {
-						    	fontColor: "white",
-						    	min: 0,
-						    	max: 40,
-						    	callback: function(value) {
-						      	return value + "%"
-						   		}
-								},
-					    	scaleLabel: {
-						    	display: true
-					     	}
-					 		}]
-				  	},
-				    	plugins: {
-					    // Change options for ALL labels of THIS CHART
-					    	datalabels: {
-									color: 'white',
-									anchor: 'end',
-									align: 'right',
-									formatter: function(value, context) {
-		    						return value + '%';
-									}
-					    	}
-							}
-			    	}
- 			});
-
-			var ctx2 = document.getElementById('pq2').getContext('2d');
-			var chart = new Chart(ctx2, {
- 			    type: 'horizontalBar',
- 			    data: {
- 						labels: ['SQL ', 'Javascript ', 'HTML/CSS ', 'C# ', 'Python ', 'Java ', 'PHP ', 'TypeScript ', 'R ', 'C++ ', 'VBA ', 'Bash ', 'Otro (especifique) ', 'C ', 'Dart ', 'MATLAB ', 'Kotlin ', 'Stata ', 'Ruby ', 'Eviews ', 'Go ', 'Swift ', 'Rust ', 'Objective-C ', 'Perl ', 'Assembly ', 'Haskell ', 'Scala '],
- 						datasets: [{
- 				    	backgroundColor: '#1dc4f7',
- 				    	borderColor: '#202529',
-				    	data: [67.1, 64.4, 63.8, 43.1, 40.1, 27, 25.6, 21.5, 12.5, 11.2, 8.1, 8, 7.3, 7.3, 3.8, 3.8, 3.5, 3.1, 2.8, 2.6, 1.7, 1.2, 1, 1, 0.7, 0.7, 0.5, 0.3]
- 						}]
- 			 		},
-			    plugins: [ChartDataLabels],
- 			    options: {
-						maintainAspectRatio: false,
-						legend: {display: false},
-				    scales: {
-					  	yAxes: [{
-								ticks: {
-						    	fontColor: "white"
-								}
-					  	}],
-					    xAxes: [{
-								ticks: {
-						    	fontColor: "white",
-						    	min: 0,
-						    	max: 80,
-						    	callback: function(value) {
-						      	return value + "%"
-						   		}
-								},
-					    	scaleLabel: {
-						    	display: true
-					     	}
-					 		}]
-				  	},
-				    	plugins: {
-					    // Change options for ALL labels of THIS CHART
-					    	datalabels: {
-									color: 'white',
-									anchor: 'end',
-									align: 'right',
-									formatter: function(value, context) {
-		    						return value + '%';
-									}
-					    	}
-							}
-			    	}
- 			});
-
-			var ctx22 = document.getElementById('pq22').getContext('2d');
-			var chart = new Chart(ctx22, {
- 			    type: 'outlabeledPie',
- 			    data: {
- 				labels: ['Trabajo independiente/solo ', 'De 2-3 integrantes (incluyéndome) ', 'De 4-6 integrantes (incluyéndome) ', 'De 7-9 integrantes (incluyéndome) ', 'De 10-15 integrantes (incluyéndome) ', 'De 16-30 integrantes (incluyéndome) ', 'Más de 30 integrantes (incluyéndome) '],
- 				datasets: [{
- 				    backgroundColor: ['#684B7D', '#3591B3', '#83C01E', '#F09314', '#EA4B72', '#B07AD2', '#2F55C1'],
- 				    borderColor: '#202529',
- 				    data: [0.122, 0.223, 0.221, 0.127, 0.129, 0.108, 0.07]
- 				}]
- 			    },
- 			    options: {legend: {display: false}}
- 			});
-
-			var ctx23 = document.getElementById('pq23').getContext('2d');
-			var chart = new Chart(ctx23, {
-			    // The type of chart we want to create
-			    type: 'bar',
-
-			    // The data for our dataset
-			    data: {
-				labels: ['Bajo nivel educativo escolar', 'Bajo nivel educativo universitario', 'Falta de oferta académica relevante', 'Bajo dominio del inglés u otros idiomas extranjeros', 'Bajos ingresos', 'Falta de empleos relevantes', 'Rigideces laborales', 'Estigmas sociales', 'Otros (especifique)'],
-				datasets: [{
-				    backgroundColor: ['#684B7D', '#3591B3', '#83C01E', '#F09314', '#EA4B72', '#B07AD2', '#2F55C1', '#2AC892', '#FACD39'],
- 				    borderColor: '#202529',
-				    data: [0.509, 0.487, 0.486, 0.507, 0.466, 0.428, 0.293, 0.208, 0.046]
-				}]
-			    },
-
-			    // Configuration options go here
-			    options: {legend: {display: false}}
-			});
 		</script>
+		<script src="charts/ctx1.js"></script>
+		<script src="charts/ctx2.js"></script>
+		<script src="charts/ctx22.js"></script>
+		<script src="charts/ctx23.js"></script>
 	</body>
 
 </html>
