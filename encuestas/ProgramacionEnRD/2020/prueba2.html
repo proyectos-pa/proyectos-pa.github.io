@@ -1,6 +1,7 @@
 <html>
 	<head>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-deferred@1"></script>
 		<style>
 			canvas {
 				-moz-user-select: none;
@@ -14,8 +15,9 @@
 		<div id="container1" style="width: 75%;">
 			<canvas id="plot1"></canvas>
 		</div>
-		<h1>asd</h1>
-		
+		<div id="container2" style="width: 100%;">
+			<canvas id="plot2"></canvas>
+		</div>
 		<script>
 			var ctx1 = document.getElementById('plot1').getContext('2d');
 			var ctx2 = document.getElementById('plot2').getContext('2d');
@@ -31,6 +33,22 @@
 				    backgroundColor: 'rgb(255, 99, 132)',
 				    borderColor: 'rgb(255, 99, 132)',
 				    data: [0, 10, 5, 2, 20, 30, 45]
+				}]
+			    },
+
+			    // Configuration options go here
+			    options: {}
+			});
+			var chart = new Chart(ctx2, {
+			    // The type of chart we want to create
+			    type: 'pie',
+
+			    // The data for our dataset
+			    data: {
+				labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+				datasets: [{
+				    backgroundColor: ['Red','Green','Blue'],
+				    data: [10, 10, 5, 2, 20, 30, 45]
 				}]
 			    },
 
