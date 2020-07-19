@@ -3,6 +3,7 @@ body {
 }
 h1,h2,h3,h4,h5,h6,p {
   color: white;
+  font-family: Arial;
 }
 h3 {
   color:white;
@@ -12,3 +13,18 @@ div#container {
 	margin:0 auto;
 	margin-bottom: 20px;
  }
+p.descripcion {
+   font-size: 20;
+}
+p.titulo {
+  font-size: 24;
+  font-weight: bold;
+}
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
