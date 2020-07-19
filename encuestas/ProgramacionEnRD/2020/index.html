@@ -14,7 +14,7 @@
 		
 	</head>
 	<body>
-		<div id="container">
+		<div id="container" style="width:100%">
 		
 		<h3>
 			1.¿Qué tipo de desarrollador se considera usted actualmente?
@@ -60,7 +60,18 @@
  			    options: {legend: {display: false}}
  			});
 			
-					 
+			var ctx2 = document.getElementById('pq2').getContext('2d');
+			var chart = new Chart(ctx2, {
+ 			    type: 'horizontalBar',
+ 			    data: {
+ 				labels: ['SQL ', 'Javascript ', 'HTML/CSS ', 'C# ', 'Python ', 'Java ', 'PHP ', 'TypeScript ', 'R ', 'C++ ', 'VBA ', 'Bash ', 'Otro (especifique) ', 'C ', 'Dart ', 'MATLAB ', 'Kotlin ', 'Stata ', 'Ruby ', 'Eviews ', 'Go ', 'Swift ', 'Rust ', 'Objective-C ', 'Perl ', 'Assembly ', 'Haskell ', 'Scala '],
+ 				datasets: [{
+ 				    backgroundColor: ['#684B7D', '#3591B3', '#83C01E', '#F09314', '#EA4B72', '#B07AD2', '#2F55C1', '#2AC892', '#FACD39', '#D04241', '#4F4A8B', '#333747', '#199935', '#D66121', '#921F3D', '#EA4B72', '#684B7D', '#3591B3', '#83C01E', '#F09314', '#EA4B72', '#B07AD2', '#2F55C1', '#2AC892', '#FACD39', '#D04241', '#C0CBE6', '#FFFFFF'],
+ 				    data: [0.671, 0.644, 0.638, 0.431, 0.401, 0.27, 0.256, 0.215, 0.125, 0.112, 0.081, 0.08, 0.078, 0.073, 0.073, 0.038, 0.038, 0.035, 0.031, 0.028, 0.026, 0.017, 0.012, 0.01, 0.01, 0.007, 0.007, 0.005]
+ 				}]
+ 			    },
+ 			    options: {legend: {display: false}}
+ 			});		 
 			
 			
 			var ctx22 = document.getElementById('pq22').getContext('2d');
