@@ -15,9 +15,7 @@
 			<canvas id="plot1"></canvas>
 		</div>
 		<h1>asd</h1>
-		<div id="container2" style="width: 100%;">
-			<canvas id="plot2"></canvas>
-		</div>
+		
 		<script>
 			var ctx1 = document.getElementById('plot1').getContext('2d');
 			var ctx2 = document.getElementById('plot2').getContext('2d');
@@ -33,22 +31,6 @@
 				    backgroundColor: 'rgb(255, 99, 132)',
 				    borderColor: 'rgb(255, 99, 132)',
 				    data: [0, 10, 5, 2, 20, 30, 45]
-				}]
-			    },
-
-			    // Configuration options go here
-			    options: {}
-			});
-			var chart = new Chart(ctx2, {
-			    // The type of chart we want to create
-			    type: 'pie',
-
-			    // The data for our dataset
-			    data: {
-				labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-				datasets: [{
-				    backgroundColor: ['Red','Green','Blue'],
-				    data: [10, 10, 5, 2, 20, 30, 45]
 				}]
 			    },
 
