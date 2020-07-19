@@ -8,7 +8,30 @@
 				-ms-user-select: none;
 			}
 		</style>
-		
+		<script>
+			var inView = false;
+
+			function isScrolledIntoView(elem)
+			{
+			    var docViewTop = $(window).scrollTop();
+			    var docViewBottom = docViewTop + $(window).height();
+
+			    var elemTop = $(elem).offset().top;
+			    var elemBottom = elemTop + $(elem).height();
+
+			    return ((elemTop <= docViewBottom) && (elemBottom >= docViewTop));
+			}
+
+			$(window).scroll(function() {
+			    if (isScrolledIntoView('#canvas')) {
+				if (inView) { return; }
+				inView = true;
+				new Chart(document.getElementById("plot2").getContext("2d")).Pie(data);
+			    } else {
+				inView = false;  
+			    }
+			});
+		</script>
 	</head>
 	<body>
 		<div id="container" style="width: 75%;">
