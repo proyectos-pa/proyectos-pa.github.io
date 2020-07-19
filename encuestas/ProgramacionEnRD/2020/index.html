@@ -14,11 +14,23 @@
 		
 	</head>
 	<body>
-		<div id="container" style="width:100%">
+		<div id="container">
 		
-		
-					
-					
+			<h3>
+				1.¿Qué tipo de desarrollador se considera usted actualmente?
+			</h3>
+			<div id="container1" style="width: 100%;">
+				<canvas id="pq1"></canvas>
+			</div>
+
+			<h3>
+				2.¿Cuáles lenguajes de programación ha utilizado en los últimos 12 meses? Seleccione todos los que apliquen.
+
+			<div id="container2" style="width: 100%;">
+				<canvas id="pq2"></canvas>
+			</div>
+			</div>
+			
 		<h3>
 			22.¿Cuál es el tamaño de su equipo?
 		</h3>
@@ -35,8 +47,33 @@
 		</div>
 		
 		
-		
 		<script>
+			
+			var ctx1 = document.getElementById('pq1').getContext('2d');
+			var chart = new Chart(ctx1, {
+ 			    type: 'outlabeledPie',
+ 			    data: {
+ 				labels: ['Desarrollador de back-end ', 'Desarrollador de front-end ', 'Desarrollador completo (front-end + back-end) ', 'Desarrollador de aplicaciones móviles ', 'Administrador de base de datos ', 'Diseñador ', 'Administrador de sistemas ', 'Analista/ingeniero de datos o BI ', 'Científico de datos o especialista de aprendizaje automático (machine learning) ', 'Investigador académico ', 'Educador ', 'Desarrollador de video juegos ', 'Ejecutivo senior o VP ', 'Marketing o profesional de ventas ', 'Otro (especifique) '],
+ 				datasets: [{
+ 				    backgroundColor: ['#684B7D', '#3591B3', '#83C01E', '#F09314', '#EA4B72', '#B07AD2', '#2F55C1', '#2AC892', '#FACD39', '#D04241', '#4F4A8B', '#333747', '#199935', '#D66121', '#921F3D'],
+ 				    data: [0.179, 0.106, 0.321, 0.045, 0.042, 0.017, 0.033, 0.076, 0.045, 0.028, 0.007, 0.01, 0.021, 0.009, 0.061]
+ 				}]
+ 			    },
+ 			    options: {legend: {display: false}}
+ 			});
+			
+			var ctx2 = document.getElementById('pq2').getContext('2d');
+			var chart = new Chart(ctx2, {
+ 			    type: 'horizontalBar',
+ 			    data: {
+ 				labels: ['SQL ', 'Javascript ', 'HTML/CSS ', 'C# ', 'Python ', 'Java ', 'PHP ', 'TypeScript ', 'R ', 'C++ ', 'VBA ', 'Bash ', 'Otro (especifique) ', 'C ', 'Dart ', 'MATLAB ', 'Kotlin ', 'Stata ', 'Ruby ', 'Eviews ', 'Go ', 'Swift ', 'Rust ', 'Objective-C ', 'Perl ', 'Assembly ', 'Haskell ', 'Scala '],
+ 				datasets: [{
+ 				    backgroundColor: ['#684B7D', '#3591B3', '#83C01E', '#F09314', '#EA4B72', '#B07AD2', '#2F55C1', '#2AC892', '#FACD39', '#D04241', '#4F4A8B', '#333747', '#199935', '#D66121', '#921F3D', '#EA4B72', '#684B7D', '#3591B3', '#83C01E', '#F09314', '#EA4B72', '#B07AD2', '#2F55C1', '#2AC892', '#FACD39', '#D04241', '#C0CBE6', '#FFFFFF'],
+ 				    data: [0.671, 0.644, 0.638, 0.431, 0.401, 0.27, 0.256, 0.215, 0.125, 0.112, 0.081, 0.08, 0.078, 0.073, 0.073, 0.038, 0.038, 0.035, 0.031, 0.028, 0.026, 0.017, 0.012, 0.01, 0.01, 0.007, 0.007, 0.005]
+ 				}]
+ 			    },
+ 			    options: {legend: {display: false}}
+ 			});
 			
 			var ctx22 = document.getElementById('pq22').getContext('2d');
 			var chart = new Chart(ctx22, {
