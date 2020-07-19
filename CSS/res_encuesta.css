@@ -12,6 +12,7 @@ div#container {
   max-width:750px;
 	margin:0 auto;
 	margin-bottom: 20px;
+  margin-top: 40px;
  }
 div.descripcion {
    font-size: 18;
