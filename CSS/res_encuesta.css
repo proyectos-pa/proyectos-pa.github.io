@@ -8,9 +8,8 @@ h3 {
   color:white;  
 }
 .container {
-   margin-top: 20px;
-   margin-bottom: 200px;
-   margin-right: 10px;
-   margin-left: 100px;
-   margin: auto;
+  max-width:575px;
+	margin:0 auto;
+	margin-bottom: 20px;
  }
+
