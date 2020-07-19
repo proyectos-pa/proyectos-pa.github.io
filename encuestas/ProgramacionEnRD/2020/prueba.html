@@ -35,7 +35,22 @@
 			    if (isScrolledIntoView('#canvas')) {
 				if (inView) { return; }
 				inView = true;
-				new Chart(document.getElementById("plot2").getContext("2d")).Pie(data);
+				var chart = new Chart(ctx2, {
+				    // The type of chart we want to create
+				    type: 'pie',
+
+				    // The data for our dataset
+				    data: {
+					labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+					datasets: [{
+					    backgroundColor: ['Red','Green','Blue'],
+					    data: [10, 10, 5, 2, 20, 30, 45]
+					}]
+				    },
+
+				    // Configuration options go here
+				    options: {}
+				});
 			    } else {
 				inView = false;  
 			    }
