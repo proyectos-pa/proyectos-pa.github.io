@@ -1,6 +1,7 @@
 <html>
 	<head>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-deferred@1"></script>
 		<style>
 			canvas {
 				-moz-user-select: none;
@@ -52,7 +53,14 @@
 			    },
 
 			    // Configuration options go here
-			    options: {}
+			    options: {
+			    	plugins: {
+				      deferred: {
+					xOffset: 150,   // defer until 150px of the canvas width are inside the viewport
+					yOffset: '50%', // defer until 50% of the canvas height are inside the viewport
+					delay: 500      // delay of 500 ms after the canvas is considered inside the viewport
+				      }
+			    }
 			});
 		</script>
 	</body>
