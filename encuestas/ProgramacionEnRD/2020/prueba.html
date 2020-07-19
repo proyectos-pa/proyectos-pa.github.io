@@ -33,9 +33,27 @@
 		<div id="container2" style="width: 100%;">
 			<canvas id="plot2"></canvas>
 		</div>
+		<p>
+			Aumentar de nuevo las fa- cilidades de liquidez en moneda extranjera a las intermediarias fi- nancieras mediante REPOS a 120 días y al 1.5 % de interés.
+			• Reducir más el coeficien- te de encaje legal para depósitos en moneda extranjera para libe- rar US$ 300 millones para apoyo cambiario y la tasa de cambio.
+			• Apoyar y fomentar el merca- do de capitales dominicano, me- diante implementar mayores fa- cilidades, incentivos y reducción de los costos operacionales de los Puestos de Bolsas, los Fondos de Inversiones Inmobiliarios, de Te- sorerías o Energéticos, las Admi- nistradores de Fondos de Inver- siones (SAFI), las Fiducias, que son la nueva generación de inter- mediación financiera y de mer- cados de capitales. Mejorar sus
+			regulaciones y aplicar nuevos in- centivos de crecimiento.
+			Todo indica que por un año la política monetaria y crediticia de- berá ser expansiva para reactivar la economía y crear nuevos em- pleos, aunque vigilante de man- tener una liquidez general que no provoque un aumento de la infla- ción o la devaluación de la mone- da.
+			Reactivación Económica:
+			Después de manejar y controlar los déficits internos y externos de la economía para navegar a través de la crisis económica, el país en- trará en una etapa que requerirá implementar programas de reac- tivación económica sectorial y de creación de empleos. Programas concretos de inversiones públicas en obras que produzcan encade- namientos y puestos de trabajos, en las ciudades y el campo y pla- nes con créditos y facilidades para reactivar al sector privado, el gran motor de la economía.
+			También necesitará exten- der los planes sociales de sosteni- miento de las ayudas de salarios, como FASE, Para Ti, la Tarjeta de Solidaridad con aumentos de sus montos mensuales para mante- ner la gobernabilidad social. Estos programas ayudarán a aumentar la demanda de consumo y la pro- ducción interna agropecuaria e in- dustrial.
+			Dentro de esta política de estí- mulos nuestra economía requiere diseñar una política de aumento de la producción exportable y de colocación de los productos en el exterior.
+			Las instituciones como el ban- co de exportación BANDEX debe- rán ser reformadas y capitaliza- das para convertirla en un banco mixto de segundo piso, con pla- nes de préstamos a largo plazo y facilidades de créditos de pre y post embarque, los incentivos a las producción y exportaciones que concede PROINDUSTRIA deben ser ampliados y el CEI-RD deberá ser relanzado con mayor intensidad y eficiencia.
+			El turismo y la hotelería necesi- tarán de planes de reestructuración de deudas bancarias, apoyo redise- ñado de la promoción mundial, fa- cilidades y descuentos impositivos, incentivos a las líneas aéreas, reduc- ción de impuestos de los aeropuer- tos y apoyo de liquidez para cubrir las nóminas y gastos operacionales durante el resto del 2020.
+			En resumen, los planes de reacti- vación de la economía será la gran tarea de los próximos meses y del nuevo Gobierno que surja en agos- to. Será un gran reto de la política económica, social y del sector ex- terno. La meta será volver a crecer y volver a crear empleos y bienestar a la sociedad.
+		</p>
+		<div id="container3" style="width: 100%;">
+			<canvas id="plot3"></canvas>
+		</div>
 		<script>
 			var ctx1 = document.getElementById('plot1').getContext('2d');
 			var ctx2 = document.getElementById('plot2').getContext('2d');
+			var ctx3 = document.getElementById('plot3').getContext('2d');
 			var chart = new Chart(ctx1, {
 			    // The type of chart we want to create
 			    type: 'horizontalBar',
@@ -55,6 +73,22 @@
 			    options: {}
 			});
 			var chart = new Chart(ctx2, {
+			    // The type of chart we want to create
+			    type: 'pie',
+
+			    // The data for our dataset
+			    data: {
+				labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+				datasets: [{
+				    backgroundColor: ['Red','Green','Blue'],
+				    data: [10, 10, 5, 2, 20, 30, 45]
+				}]
+			    },
+
+			    // Configuration options go here
+			    options: {}
+			});
+			var chart = new Chart(ctx3, {
 			    // The type of chart we want to create
 			    type: 'pie',
 
