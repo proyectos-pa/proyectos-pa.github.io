@@ -343,7 +343,13 @@
 
 		<script>
 			Chart.plugins.unregister(ChartDataLabels);
-			Chart.defaults.global.defaultFontSize = 15;
+			if (window.screen.width < 480){
+					var dFS = 13;
+			} else {
+				var dFS = 15;
+			}
+
+			Chart.defaults.global.defaultFontSize = dFS;
 			Chart.defaults.global.defaultFontFamily = 'Arial';
 		</script>
 		<script src="charts/ctx1.js"></script>
