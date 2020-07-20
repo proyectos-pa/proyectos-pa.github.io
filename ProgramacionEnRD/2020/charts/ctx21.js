@@ -2,7 +2,7 @@ var ctx21 = document.getElementById('pq21').getContext('2d');
 var chart = new Chart(ctx21, {
   type: 'horizontalBar',
   data: {
-    labels: ['Servicios de IT ', 'Finanzas ', 'Ingeniería ', 'Telecomunicaciones ', 'Comercio en línea ', 'Administración Pública ', 'Economía ', 'Salud ', 'Educación (docencia) ', 'Manufactura ', 'Marketing ', 'Ciberseguridad ', 'Academia (investigación) ', 'Servicios geográficos/cartográficos ', 'Automotriz '],
+    labels: ['Servicios de IT ', 'Finanzas ', 'Ingeniería ', 'Telecomunicaciones ', 'Comercio en línea ', 'Administración Pública ', 'Economía ', 'Salud ', 'Educación (docencia) ', 'Manufactura ', 'Marketing ', 'Ciberseguridad ', 'Academia (investigación) ', [['Servicios'],['geográficos/cartográficos']], 'Automotriz '],
     datasets: [{
       backgroundColor: '#1dc4f7',
       borderColor: '#202529',
