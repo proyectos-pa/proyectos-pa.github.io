@@ -56,12 +56,7 @@ a:link, a:visited {
 a:hover {
   color: #1dc4f7;
 }
-.button {
-  border-radius: 10px;
-  border: none;
-  color: white;
-  background-color:#1dc4f7;
-}
+
 #banner img {
   margin-left: auto;
   margin-right: auto;
