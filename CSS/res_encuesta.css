@@ -30,8 +30,6 @@ div.tabla-contenido-categoria {
    margin-top: 15px;
    color: #bfbfbf;
 }
-
-
 div.tabla-contenido-titulo {
    font-size: 18;
    margin-left: 40px;
@@ -55,7 +53,7 @@ p.nobs {
 div.social-media{
   float: right;
   margin-left:auto;
-  margin-right:0;
+  margin-right: 5px;
 }
 p.social-media{
   text-align: right;
