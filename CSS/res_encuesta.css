@@ -50,6 +50,11 @@ p.nobs {
   text-align: right;
   margin-right:20px;
 }
+div.VolverArriba {
+  font-size: 12;
+  text-align: right;
+  margin-right:20px;
+}
 div.social-media{
   float: right;
   margin-left:auto;
