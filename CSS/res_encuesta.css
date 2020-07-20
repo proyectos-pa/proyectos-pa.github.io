@@ -54,6 +54,7 @@ div.social-media{
   float: right;
   margin-left:auto;
   margin-right: 5px;
+  direction:rtl;
 }
 p.social-media{
   text-align: right;
