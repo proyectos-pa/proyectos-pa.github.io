@@ -1,7 +1,7 @@
 body {
   background-color: #202529;
 }
-h1,h2,h3,h4,h5,h6,p {
+h1,h2,h3,h4,h5,h6,p,a {
   color: white;
   font-family: Arial;
 }
@@ -47,7 +47,15 @@ div.social-media{
 p.social-media{
   text-align: right;
 }
-
+a:link, a:visited {
+  color:white;
+  text-decoration: none;
+  padding: 4px;
+  line-height: 1.6;
+}
+a:hover {
+  color: #1dc4f7;
+}
 hr {
   display: block;
   height: 1px;
