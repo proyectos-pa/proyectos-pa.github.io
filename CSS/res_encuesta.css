@@ -84,3 +84,46 @@ hr {
   padding: 0;
   border-color:gray;
 }
+
+
+/* Style all font awesome icons */
+.fa {
+  padding: 20px;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
+  border: 1px solid #1dc4f7;
+}
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-facebook {
+  border: 1px solid white;
+  color: white;
+}
+
+/* Twitter */
+.fa-twitter {
+  border: 1px solid white;
+  color: white;
+}
+
+/* IG */
+.fa-instagram {
+  border: 1px solid white;
+  color: white;
+}
+
+/* LinkedIn */
+.fa-linkedin {
+  border: 1px solid white;
+  color: white;
+}
