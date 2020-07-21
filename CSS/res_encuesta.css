@@ -64,6 +64,10 @@ div.social-media{
 p.social-media{
   text-align: right;
 }
+div.referencias {
+  font-size: 12;
+  margin-left: 20px;
+}
 a:link, a:visited {
   color:white;
   text-decoration: none;
