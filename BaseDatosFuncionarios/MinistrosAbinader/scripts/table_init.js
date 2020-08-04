@@ -1,0 +1,9 @@
+$(document).ready(function() {
+    $('#example').DataTable( {
+        ajax:           "../data/2500.txt",
+        deferRender:    true,
+        scrollY:        200,
+        scrollCollapse: true,
+        scroller:       true
+    } );
+} );
