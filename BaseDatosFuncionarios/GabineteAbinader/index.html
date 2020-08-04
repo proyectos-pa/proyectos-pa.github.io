@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Tabla Gabinete Abinader | Pascal Analytics">
+  <meta name="keywords" content="Gabinete, Luis Abinader, Abinader, Ministros, República Dominicana">
+  <meta name="author" content="Pascal Analytics">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title"         content="Tabla Gabinete Abinader | Pascal Analytics" />
+  <meta property="og:description"   content="Base de datos del gabinete de Luis Abinader" />
+  <meta property="og:image"         content="https://proyectos.pascalanalytics.com/ProgramacionEnRD/2020/img/Encuesta Programacion en RD 2020.png" />
+  <title>Tabla Ministros Abinader | Pascal Analytics</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-161560615-1"></script>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-161560615-1');
+  </script>
+
+  </head>
+  <body>
+
+
+
+    <table id="example" class="display" style="width:100%">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+        </thead>
+    </table>
+
+    <script>
+    $(document).ready(function() {
+      $('#example').dataTable( {
+      "ajax": "https://proyectos.pascalanalytics.com/BaseDatosFuncionarios/MinistrosAbinader/prueba.json",
+      "columns": [
+            { "data": "nombre" },
+            { "data": "posicion" },
+            { "data": "cargo" }
+        ]
+    } );
+  } );
+  </script>
+  </body>
+  </html>
