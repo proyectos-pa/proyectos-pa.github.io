@@ -1,4 +1,6 @@
-[
+{
+  "data" :
+  [
   {
     "nombre": "Milagros Ortiz Bosch",
     "posicion": "Directora de Ética Gubernamental",
@@ -195,3 +197,4 @@
     "cargo": "Ministro/a"
   }
 ]
+}
