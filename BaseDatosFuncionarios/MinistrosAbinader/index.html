@@ -42,22 +42,9 @@
     <table id="example" class="display" style="width:100%">
         <thead>
             <tr>
-                <th>Name</th>
-                <th>Position</th>
-                <th>Office</th>
-                <th>Extn.</th>
-                <th>Start date</th>
-                <th>Salary</th>
-            </tr>
-        </thead>
-        <tfoot>
-            <tr>
-                <th>Name</th>
-                <th>Position</th>
-                <th>Office</th>
-                <th>Extn.</th>
-                <th>Start date</th>
-                <th>Salary</th>
+                <th>Nombre</th>
+                <th>Posición</th>
+                <th>Cargo</th>
             </tr>
         </tfoot>
     </table>
@@ -66,8 +53,7 @@
     $(document).ready(function() {
       $('#example').dataTable( {
       "ajax": {
-        "url": "data.txt",
-        "dataSrc": "tableData"
+        "url": "https://proyectos.pascalanalytics.com/BaseDatosFuncionarios/MinistrosAbinader/prueba.json"
       }
     } );
   } );
