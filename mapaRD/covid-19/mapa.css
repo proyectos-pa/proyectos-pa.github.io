@@ -1,0 +1,14 @@
+#tooltip {
+  background: cornsilk;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+polygon.div_territorial {
+  stroke: none;
+}
+
+g:hover > polygon {
+  stroke: white;
+}
