@@ -12,3 +12,9 @@ polygon.div_territorial {
 g:hover > polygon {
   stroke: white;
 }
+
+.full-width-interactive-plot {
+  width: 100vw;
+  position: relative;
+  left: calc(-50vw + 50%);
+}
